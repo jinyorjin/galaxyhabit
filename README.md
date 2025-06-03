@@ -1,12 +1,34 @@
-# React + Vite
+![image](https://github.com/user-attachments/assets/d1920abb-6122-47d9-97b9-d9ed98e506c2)
+# GalaxyHabit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GalaxyHabit is a creative and visual habit tracker that transforms your GitHub commits into planets in space. Each commit becomes a small star or planet, and your daily progress builds a visual journey through a galaxy.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive 3D galaxy with floating planets using Three.js and React Three Fiber
+- Tracks recent GitHub commits using the GitHub API
+- Visual feedback based on daily commit count (planet size, brightness)
+- Twinkling background stars and animated meteor effects
+- Clickable planets display commit messages for each day
 
-## Expanding the ESLint configuration
+## Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+You can see a live demo or screenshot in the public folder (e.g., `public/preview.png`).
+
+## Tech Stack
+
+- React
+- Three.js with @react-three/fiber
+- Framer Motion
+- GitHub REST API
+- Vite
+
+## Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/jinyorjin/galaxyhabit.git
+cd galaxyhabit
+npm install
+npm run dev
