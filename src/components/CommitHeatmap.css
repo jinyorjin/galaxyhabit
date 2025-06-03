@@ -1,0 +1,55 @@
+.heatmap-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 6px;
+}
+
+.heatmap-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.star {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1); /* 0개 커밋용 */
+  transition: all 0.3s;
+}
+
+/* 커밋 수에 따라 색상 및 효과 */
+.star[data-commit="1"] {
+  background-color: #66ffcc;
+}
+.star[data-commit="2"] {
+  background-color: #00ccff;
+  box-shadow: 0 0 4px #00ccff;
+}
+.star[data-commit="3"] {
+  background-color: #33ccff;
+  box-shadow: 0 0 6px #33ccff;
+}
+.star[data-commit="4"] {
+  background-color: #00ffff;
+  box-shadow: 0 0 8px #00ffff;
+}
+.star[data-commit="5"] {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}

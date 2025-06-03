@@ -1,0 +1,65 @@
+/* Home.css */
+.home-container {
+  position: relative;
+  z-index: 1; /* 배경보다 위로 */
+  color: white;
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 5px #ccc;
+}
+
+.commit-subtle {
+  font-size: 1rem;
+  color: #ffeb3b;
+  margin-top: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.commit-subtle:hover {
+  opacity: 1;
+  text-shadow: 0 0 10px #ffee58;
+}
+.commit-log {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-family: "Courier New", monospace;
+  z-index: 100;
+  max-width: 80%;
+  backdrop-filter: blur(8px);
+}
+.commit-log ul {
+  list-style-type: none;
+  padding: 0;
+}
+.commit-log li::before {
+  content: "🌟 ";
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
