@@ -7,7 +7,7 @@ export async function getCommitStars(username) {
   const events = await res.json();
 
   // 3. 오늘 날짜를 YYYY-MM-DD 형식으로 추출
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toLocaleDateString("en-CA"); // "2025-06-04"
 
   // 4. 커밋 총합을 저장할 변수
   let totalCommits = 0;

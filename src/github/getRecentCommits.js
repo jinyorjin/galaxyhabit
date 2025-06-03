@@ -15,7 +15,7 @@ export async function getRecentCommits(username) {
     if (event.type === "PushEvent") {
       // created_at: 이벤트가 발생한 날짜/시간
       // 날짜만 추출 (예: "2024-06-03T12:00:00Z" → "2024-06-03")
-      const date = new Date(event.created_at).toISOString().split("T")[0];
+      const date = new Date(event.created_at).toLocaleDateString("en-CA"); // "YYYY-MM-DD"
 
       // 커밋 메시지들만 배열로 추출 (배열 형태)
       const messages = event.payload.commits.map((c) => c.message);
@@ -44,7 +44,7 @@ export async function getRecentCommits(username) {
     day.setDate(today.getDate() - i);
 
     // 날짜를 문자열(YYYY-MM-DD) 형식으로 변환
-    const key = day.toISOString().split("T")[0];
+    const key = day.toLocaleDateString("en-CA");
 
     // 해당 날짜에 커밋이 없으면 기본값 설정 (count 0, 메시지 없음)
     const data = commitsPerDay[key] || { count: 0, messages: [] };
